@@ -30,8 +30,7 @@ public class Capybara extends Animal {
                 .add(Attributes.MOVEMENT_SPEED, 0.25);
     }
 
-    @Override
-    public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
+    @Override public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
         return EntityInit.CAPYBARA.get().create(level);
     }
 }
