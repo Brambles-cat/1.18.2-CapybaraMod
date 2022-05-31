@@ -12,9 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class Capybara extends Animal {
-    public Capybara(EntityType<? extends Animal> entityType, Level level) {
-        super(entityType, level);
-    }
+    public Capybara(EntityType<? extends Animal> entityType, Level level) {super(entityType, level)};
 
     @Override protected void registerGoals() {
         goalSelector.addGoal(0, new FloatGoal(this));
