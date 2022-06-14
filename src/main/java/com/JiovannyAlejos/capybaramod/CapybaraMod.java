@@ -1,6 +1,7 @@
 package com.JiovannyAlejos.capybaramod;
 
 import com.JiovannyAlejos.capybaramod.entity.EntityInit;
+import com.JiovannyAlejos.capybaramod.init.SoundInit;
 import com.JiovannyAlejos.capybaramod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
@@ -23,6 +24,7 @@ public class CapybaraMod {
     public CapybaraMod() {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        SoundInit.SOUNDS.register(eventBus);
         ModItems.register(eventBus);
         EntityInit.ENTITIES.register(eventBus);
         // Register ourselves for server and other game events we are interested in
