@@ -1,7 +1,7 @@
 package com.JiovannyAlejos.capybaramod.events;
 
 import com.JiovannyAlejos.capybaramod.CapybaraMod;
-import com.JiovannyAlejos.capybaramod.entity.EntityInit;
+import com.JiovannyAlejos.capybaramod.init.EntityInit;
 import com.JiovannyAlejos.capybaramod.renderer.EntityRenderer;
 import com.JiovannyAlejos.capybaramod.renderer.model.CapyModel;
 import net.minecraftforge.api.distmarker.Dist;

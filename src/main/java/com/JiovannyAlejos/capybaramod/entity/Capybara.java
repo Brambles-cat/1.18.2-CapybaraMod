@@ -1,5 +1,6 @@
 package com.JiovannyAlejos.capybaramod.entity;
 
+import com.JiovannyAlejos.capybaramod.init.EntityInit;
 import com.JiovannyAlejos.capybaramod.init.SoundInit;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -13,7 +14,7 @@ import net.minecraft.world.entity.ai.control.SmoothSwimmingMoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Panda;
+import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -30,6 +31,7 @@ public class Capybara extends Animal {
 
     @Override protected void registerGoals() {
         // goalSelector.addGoal(0, new FloatGoal(this));
+        goalSelector.addGoal(8, new BreedGoal(this, 1.0D));
         goalSelector.addGoal(9, new TemptGoal(this, 1.0D, Ingredient.of(Items.MELON_SLICE), false));
         goalSelector.addGoal(9, new RandomLookAroundGoal(this));
         goalSelector.addGoal(10, new RandomStrollGoal(this, 1));
@@ -45,6 +47,7 @@ public class Capybara extends Animal {
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
         return EntityInit.CAPYBARA.get().create(level);
     }
+
     public class CapyMoveControl extends SmoothSwimmingMoveControl {
         private final Capybara capy;
         public CapyMoveControl(Capybara capy) {
@@ -57,9 +60,11 @@ public class Capybara extends Animal {
        return SoundInit.CAPY_AMBIENT.get();
     }
     @Override protected SoundEvent getHurtSound(DamageSource source) {
+        System.out.println("ow");
         return SoundInit.CAPY_HURT.get();
     }
     @Override protected SoundEvent getDeathSound() {
+        System.out.println("kil");
         return SoundInit.CAPY_DEATH.get();
     }
     @Override public boolean canBreatheUnderwater() {return true;}

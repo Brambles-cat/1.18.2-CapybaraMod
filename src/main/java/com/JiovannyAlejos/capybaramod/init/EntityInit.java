@@ -1,5 +1,6 @@
-package com.JiovannyAlejos.capybaramod.entity;
+package com.JiovannyAlejos.capybaramod.init;
 import com.JiovannyAlejos.capybaramod.CapybaraMod;
+import com.JiovannyAlejos.capybaramod.entity.Capybara;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;

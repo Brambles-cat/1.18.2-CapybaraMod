@@ -12,7 +12,7 @@ public class ModItems {
     public static final DeferredRegister<Item> items =
             DeferredRegister.create(ForgeRegistries.ITEMS, CapybaraMod.MOD_ID);
 
-    public static final RegistryObject<Item> ITEM_REGISTRY = items.register("water_spout",
+    public static final RegistryObject<Item> WATER_SPOUT = items.register("water_spout",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {

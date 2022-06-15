@@ -2,7 +2,7 @@ package com.JiovannyAlejos.capybaramod.events;
 
 import com.JiovannyAlejos.capybaramod.CapybaraMod;
 import com.JiovannyAlejos.capybaramod.entity.Capybara;
-import com.JiovannyAlejos.capybaramod.entity.EntityInit;
+import com.JiovannyAlejos.capybaramod.init.EntityInit;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
