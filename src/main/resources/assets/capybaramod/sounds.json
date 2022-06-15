@@ -1,0 +1,18 @@
+{
+  "entity.capybara.ambient" : {
+    "sounds" : [
+      "capybaramod:capy_ambient1",
+      "capybaramod:capy_ambient2"
+    ]
+  },
+  "entity.capybara.hurt" : {
+    "sounds" : [
+      "capybaramod:capy_ambient1"
+    ]
+  },
+  "entity.capybara.death" : {
+    "sounds" : [
+      "capybaramod:capy_ambient1"
+    ]
+  }
+}
