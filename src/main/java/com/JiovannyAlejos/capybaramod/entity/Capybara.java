@@ -30,7 +30,7 @@ public class Capybara extends Animal {
     }
 
     @Override protected void registerGoals() {
-        // goalSelector.addGoal(0, new FloatGoal(this));
+        goalSelector.addGoal(11, new FloatGoal(this));
         goalSelector.addGoal(8, new BreedGoal(this, 1.0D));
         goalSelector.addGoal(9, new TemptGoal(this, 1.0D, Ingredient.of(Items.MELON_SLICE), false));
         goalSelector.addGoal(9, new RandomLookAroundGoal(this));
@@ -60,11 +60,9 @@ public class Capybara extends Animal {
        return SoundInit.CAPY_AMBIENT.get();
     }
     @Override protected SoundEvent getHurtSound(DamageSource source) {
-        System.out.println("ow");
         return SoundInit.CAPY_HURT.get();
     }
     @Override protected SoundEvent getDeathSound() {
-        System.out.println("kil");
         return SoundInit.CAPY_DEATH.get();
     }
     @Override public boolean canBreatheUnderwater() {return true;}
